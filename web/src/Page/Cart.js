@@ -12,8 +12,9 @@ const Cart = () => {
         removeItem,
     } = useCart();
     console.log(items)
-    if (isEmpty) return <p>Your cart is empty</p>;
+    if (isEmpty) return <p className="mt-40 text-center text-3xl ">Your cart is empty. </p>;
     return (
+        
         <div className="mt-40 my-16 container mx-auto max-w-7xl">
 
             <h1 className="text-xl">Sản Phẩm ({totalUniqueItems}) Tổng sản phẩm ({totalItems})</h1>
