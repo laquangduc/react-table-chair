@@ -15,7 +15,7 @@ const Header = () => {
             return (
                 <div>
                     <div className="">
-                        Xin chào :<span className="text-green-400">{auth.name }</span>
+                        Xin chào :<span className="text-green-400">{auth.name || auth.displayName}</span>
                     </div>
                     <button onClick={logout} className="font-medium hover:text-red-500">Đăng xuất</button>                  
                 </div>
