@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { listLimit } from '../api/productApi'
 import { useNavigate } from 'react-router'
 import { useCart } from 'react-use-cart'
+import NumberFormat from 'react-number-format';
 
 
 const ProductPage = (props) => {
@@ -90,10 +91,10 @@ const search = async (data) => {
                                                 <img src={item.images} alt="" className="transition duration-1000 ease-in-out transform hover:scale-x-90 cursor-pointer border mb-3" />
                                                 <Link to={`${item.id}`} className="my-3 text-sm uppercase not-italic text-black">{item.name}</Link>
                                                 <div className="mt-1 mb-1">
-                                                    <span className="py-3 font-medium text-base">{item.price} đ</span>
-                                                </div>
-                                           
-                                                <button className="bg-blue-500 text-white px-6 py-2 my-2" onClick={() =>addItem(item)}>Add to cart</button>
+                                                    <span className="py-3 font-medium text-base"><NumberFormat value={item.price} displayType={'text'} thousandSeparator={true}  /> đ</span>
+
+                                                </div>                                           
+                                                {/* <button className="bg-blue-500 text-white px-6 py-2 my-2" onClick={() =>addItem(item)}>Add to cart</button> */}
                                      
                                          
                                             </div>

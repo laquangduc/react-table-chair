@@ -8,12 +8,9 @@ const PrivateCart = ({ children }) => {
     const auth = isAuthenticate();
     if (!auth) {
         toast.success("Bạn cần đăng nhập để thêm giỏ hàng")
-        return (
-            
+        return (           
             <Navigate to="/signin"  />
         )
-      
-
     }
 
     return children
