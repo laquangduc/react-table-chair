@@ -56,7 +56,7 @@ const Signin = () => {
                             {errors.password && <p className="text-red-500">field is required</p>}
                         </div>
                         <button type="submit" className="px-3 bg-gray-200 py-3 text-black font-bold border hover:bg-blue-300">Signin</button>
-                        <button onClick={googleSigin} className="px-3 bg-red-500 py-2 font-medium my-3"> <GooglePlusOutlined style={{ fontSize: 30 }} /> Google</button>
+                        {/* <button onClick={googleSigin} className="px-3 bg-red-500 py-2 font-medium my-3"> <GooglePlusOutlined style={{ fontSize: 30 }} /> Google</button> */}
                     </div>
                 </div>
             </form>

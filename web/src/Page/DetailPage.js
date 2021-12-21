@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { read } from "../api/productApi";
 import NumberFormat from 'react-number-format';
+import { useCart } from "react-use-cart";
 export default function ProductDetail(props) {
     const { id } = useParams();
     const [products, setProduct] = useState([]);
+    const {addItem} = useCart()
+
     useEffect(() => {
         const getProduct = async () => {
             try {
@@ -47,7 +50,7 @@ export default function ProductDetail(props) {
                                     TAGS:	chair, living room, sofas
                                 </div>
                                 <div>
-                                    <button className="bg-blue-300 text-white px-5 py-3 hover:bg-red-400">Thêm Vào Giỏ Hàng</button>
+                                    <button className="bg-blue-300 text-white px-5 py-3 hover:bg-red-400" onClick={() =>addItem(products)}>Thêm Vào Giỏ Hàng</button>
                                 </div>
                             </div>
 
